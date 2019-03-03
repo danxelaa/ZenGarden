@@ -1,0 +1,461 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+html {
+  overflow-y: auto;
+}
+
+body {
+	font-family: "Walter Turncoat", cursive;
+	overflow: hidden;
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	margin: 0;
+    border-top: 30px double #AF2C53;
+	border-bottom: 30px double #AF2C53;
+}
+
+body:before {
+	content: 'DanielaOlano(:';
+	display: block;
+	font-size: 15px;
+	margin: 8px;
+	width: 0;
+	height: 0;
+}
+
+abbr[title] {
+  border-bottom: 3px dotted;
+  color: #AF2C53;
+  border: none;
+}
+
+/*--- Fonts ---*/
+
+h1 {
+  font-family: "Special Elite", cursive;
+  font-size: 150px;
+  font-weight: 500;
+  color: #AF2C53;
+  z-index: 1;
+}
+
+h2 {
+  color: #000;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+h3 {
+  color: #AF2C53;
+  font-family: "Special Elite", cursive;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 35px;
+  margin: 2px 0;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+/*--- Links ---*/
+
+a {
+  color: #AF2C53;
+  text-decoration: none;
+}
+
+/*--- intro header ---*/
+
+.intro {
+  height: 650px;
+  width: 100%;
+  background: url('wheel.gif') center top no-repeat;
+  background-size: 1400px 650px;
+  border-bottom: 30px double #AF2C53;
+}
+
+/*--- logo ---*/
+.intro:before {
+  background: url("zen.png") center top no-repeat;
+  content: '';
+  height: 700px;
+  left: 50%;
+  margin-left: -320px;
+  position: fixed;
+  top: 210px;
+  width: 600px;
+  animation-name: logomove;
+  animation-duration: 2s;
+}
+
+header {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  top: 25px;
+  width: 100%;
+  z-index: 1;
+}
+
+header h1 {
+  color: #AF2C53;
+  display: inline-block;
+  min-height: 70px;
+  margin: 80px auto 0;
+  z-index: 2;
+  animation-name: title;
+  animation-duration: 3s;
+}
+
+header h2 {
+  float: right;
+  max-width: 700px;
+  margin: 2px auto 0;
+  width: 100%;
+  z-index: 2;
+}
+
+/*--- Summary ---*/
+
+.summary {
+  position: relative;
+  max-width: 1040px;
+  margin: 80px;
+  width: 100%;
+  z-index: 2;
+  top: 240px;
+  float: right;
+}
+.summary p {
+  clear: right;
+  color: #000;
+  float: right;
+  font-style: italic;
+  margin: 0;
+  font-size: 20px;
+  width: 350px;
+}
+
+.summary a {
+	text-decoration: none;
+	animation-name: fontblink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+/*--- Content (Paragraphs) ---*/
+
+/*--- Preamble ---*/
+
+.preamble {
+  position: relative;
+  width: 50%;
+  z-index: 4;
+  top: 250px;
+  max-width: 800px;
+  min-width: 700px;
+}
+
+.preamble {
+  margin: 0 auto;
+}
+.preamble h3 {
+  padding: 15px;
+  line-height: 1;
+  background: url('line.png') repeat-x bottom left;
+  background-size: 13em;
+}
+
+.preamble a {
+	text-decoration: none;
+	animation-name: fontblink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+/*---- Supporting Section ----*/
+
+.supporting {
+  background: rgba(241, 218, 225, 0.5);
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  min-width: 700px;
+}
+
+/*---- Explanation ----*/
+
+.explanation {
+  padding: 50px 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 550px;
+  max-width: 800px;
+  background-color: #fff;
+  border: 10px dotted;
+  min-width: 700px;
+}
+
+.explanation h3 {
+  padding: 15px;
+  line-height: 1;
+  background: url('line.png') repeat-x bottom left;
+  background-size: 13em;
+}
+
+.explanation a {
+	text-decoration: none;
+	animation-name: fontblink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+/*---- Participation ----*/
+
+.participation {
+  padding: 50px 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 550px;
+  max-width: 800px;
+  min-width: 700px;
+}
+
+.participation h3 {
+  padding: 15px;
+  line-height: 1;
+  background: url('line.png') repeat-x bottom left;
+  background-size: 13em;
+}
+
+.participation a {
+	text-decoration: none;
+	animation-name: fontblink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+/*---- Benefits ----*/
+
+.benefits {
+  padding: 50px 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 550px;
+  max-width: 700px;
+  background-color: #fff;
+  border: 10px dotted;
+  min-width: 700px;
+}
+
+.benefits h3 {
+  padding: 15px;
+  line-height: 1;
+  background: url('line.png') repeat-x bottom left;
+  background-size: 13em;
+}
+
+.benefits a {
+	text-decoration: none;
+	animation-name: fontblink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+/*---- Requirements ----*/
+
+.requirements {
+  padding: 50px 400px;
+  position: relative;
+  margin: 50px 50px;
+  background-size: 46em;
+  top: 520px;
+  max-width: 900px;
+  height: 1200px;
+  min-width: 400px;
+}
+
+.requirements h3 {
+  position: relative;
+  top: 50px;
+  padding-bottom: 50px;
+  background: url('line.png') repeat-x bottom left;
+  max-width: 1040px;
+  min-width: 800px;
+  font-size: 100px;
+}
+
+.requirements p {
+  position: relative;
+  top: 50px;
+  min-width: 800px;
+  text-align: center;
+}
+
+.requirements p:last-child {
+  font-size: 20px;
+  margin-top: inherit ;
+  text-align: center;
+  min-width: 800px;
+  color: #fff;
+  background: #000;
+  position: inherit;
+}
+
+.requirements a {
+	text-decoration: none;
+	animation-name: fontblink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+/*---- SIDEBAR ----*/
+
+.sidebar {
+	position: absolute;
+	top: 3025px;
+	width: 280px;
+	z-index: 10;
+	background-color: #fff;
+	left: 40px;
+	padding: 20px;
+	border: 10px dotted;
+	min-width: inherit;
+}
+
+.sidebar h3 {
+  font-size: 25px;
+  text-decoration: underline;
+  margin-bottom: 0px;
+}
+
+.sidebar .design-archives h3 {
+  text-decoration: underline;
+  color: #000;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.sidebar ul li {
+  margin: 10px;
+  line-height: 18px;
+}
+
+.sidebar li a:link,
+.sidebar li a:visited {
+  font-size: 90%;
+}
+
+.sidebar a {
+	text-decoration: none;
+	animation-name: fontblink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.sidebar .design-archives a {
+	text-decoration: none;
+	animation-name: fontblink2;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	padding: 0px;
+}
+/*---- SIDEBAR - Boxes ----*/
+
+.design-selection {
+  color: #fff;
+  background: #000;
+  padding: 10px;
+}
+
+.zen-resources {
+	color: #ff4464;
+	background: #000;
+	padding: 10px;
+}
+
+.design-archives {
+	color: #000;
+	background: #fff;
+	padding: 10px;
+}
+
+/*---- FOOTER ----*/
+
+.supporting footer {
+	background: #AF2C53;
+	position: inherit;
+	font-size: 30px;
+	height: 70px;
+	text-align: center;
+	width: 100%;
+  	word-spacing: 50px;
+}
+
+.supporting footer a {
+  color: #fff;
+  margin-right: 25px;
+  vertical-align: -1em;
+  font-family: "Fredoka One", cursive;
+  text-decoration: bold;
+}
+
+.supporting footer a:hover {
+	text-decoration: underline;
+}
+
+/* ---- Animation Code ---- */
+
+@keyframes logomove {
+    0%   {top: -500px;}
+	100% {top: 210px;}
+}
+
+@keyframes title {
+	from {color: #fff;}
+    to {color: #c66c85;}
+}
+
+@keyframes sidebarblack {
+	from {background: #FFFFFF;}
+	to {background: #000000;}
+}
+
+@keyframes blink {
+	0% {background-color: #AF2C53;}
+	50% {background-color: #000;}
+	100% {background-color: #AF2C53;}
+}
+
+@keyframes fontblink {
+	0% {color: #AF2C53;}
+	50% {color: #C66C85;}
+	100% {color: #AF2C53;}
+}
+
+@keyframes fontblink2 {
+	0% {color: #000;}
+	50% {color: #C66C85;}
+	100% {color: #000;}
+}
